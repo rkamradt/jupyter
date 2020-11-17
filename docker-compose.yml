@@ -24,3 +24,9 @@ services:
      - ./notebooks:/home/jovyan
     ports:
       - 8888:8888
+  vouch:
+    image: voucher/vouch-proxy
+    volumes:
+      - ..:/config
+    ports:
+      - 9090:9090
